@@ -1,0 +1,60 @@
+<html>
+   <head>
+     <title>Air Hockey Game</title>
+     <script src="jquery-1.11.3.js"></script>
+     <script src="/socket.io/socket.io.js"></script>
+      <style>
+         body {
+            background: #dddddd;
+         }
+
+		 /*element selectors: */
+		 canvas {
+		    margin: 20px;
+			/*important here for padding to be 0 for mouse calculations */
+            padding: 0px;
+		 }
+		 /* class selectors: */
+		 .canvas {
+            background: #ffffff;
+            border: thin inset #aaaaaa;
+         }
+
+         /*id selectors: */
+
+         #canvas1 {
+         }
+
+
+      </style>
+   </head>
+
+
+  <h1 align="center">Air Hockey 2099</h1>
+
+
+
+  <body>
+    <audio></audio>
+    <canvas id='canvas1' class='canvas' width='1000' height='600'>
+      Canvas not supported
+    </canvas>
+    <p>
+      <button type='button' onclick='startButtonHandler()' id='startButton'>Spectate Game</button>
+      <button type='button' onclick='handlePlayer1()' id='playerButton1'>Join Player 1</button>
+      <button type='button' onclick='handlePlayer2()' id='playerButton2'>Join Player 2</button>
+      <button type='button' onclick='handleStopPlayer1()' id='stopButton1'>Give Up Player 1</button>
+      <button type='button' onclick='handleStopPlayer2()' id='stopButton2'>Give Up Player 2</button>
+
+   </p>
+   <p>
+      To first start the game press the 'Spectate Game' button.
+      Player is red and will use the arrow keys. Player 2 is blue and will use the 'WASD' keys.
+      When a player wants to leave, depending on the player press the appropriate 'Give up Player ' button.
+      If there are already two players playing and you want to watch, also press the 'Spectate Game' button,
+      however you will only see the game live once contact with the paddle has happened.
+   </p>
+
+    <script src='gameBoard.js'></script>
+  </body>
+</html>
