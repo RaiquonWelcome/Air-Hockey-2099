@@ -2,9 +2,6 @@ Author:
 Raiquon Welcome
 101012707
 
-Albert Montano
-101042961
-
 Version: Node js-9.4 on macOS
 
 Install: npm install socket.io
